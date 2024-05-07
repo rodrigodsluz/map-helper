@@ -7,6 +7,6 @@ export const Container = styled.div`
     justify-content: center;
     flex: 1;
 
-    background-color: #f0f0f0;
+    //background-color: #f0f0f0;
   `}
 `;

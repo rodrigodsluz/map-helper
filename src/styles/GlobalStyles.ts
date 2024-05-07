@@ -3,7 +3,7 @@ import { createGlobalStyle, css } from 'styled-components';
 export default createGlobalStyle`
   ${({
     theme: {
-      colors: { mainBackground, text, primary, scrollBar, nProgressLoadingBar },
+      colors: { mainBackground, primary, scrollBar, nProgressLoadingBar },
     },
   }) => css`
     * {
@@ -26,7 +26,7 @@ export default createGlobalStyle`
     #__next {
       background: ${mainBackground};
 
-      color: ${text};
+      color: ${primary};
     }
 
     body,
