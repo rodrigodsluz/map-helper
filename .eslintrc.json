@@ -1,15 +1,14 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true
+    "es2022": true,
+    "node": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/react",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
@@ -33,6 +32,7 @@
     "JSX": true,
     "React": true
   },
+  "ignorePatterns": ["**/*.css", "**/*.scss"],
   "rules": {
     "no-console": [
       "warn",
@@ -53,7 +53,16 @@
         "groups": [
           ["/^react/"],
           ["module"],
+          ["/^@components/"],
+          ["/^@screens/"],
+          ["/^@contexts/"],
+          ["/^@hooks/"],
+          ["/^@services/"],
+          ["/^@utils/"],
+          ["/^@routes/"],
+          ["/^@styles/"],
           ["/^~//"],
+          ["/^@/"],
           ["parent", "sibling", "index"]
         ],
         "alphabetize": {
@@ -79,11 +88,21 @@
     "no-shadow": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "no-use-before-define": "off",
+    "operator-linebreak": "off",
+    "function-paren-newline": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-wrap-multilines": "off",
+    "no-trailing-spaces": "off",
+    "no-unused-vars": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-confusing-arrow": "off",
+    "indent": "off",
+    "react/no-unused-prop-types": "off"
   }
-  // "settings": {
-  //   "import/resolver":{
-  //     "typescript":{}
-  //   }
-  // }
 }
