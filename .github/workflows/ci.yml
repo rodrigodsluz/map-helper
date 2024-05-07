@@ -1,0 +1,56 @@
+name: CI - Build Cardápio Delícia
+
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.16.0'
+          #cache: 'yarn'
+
+      - name: Install all dependencies
+        run: yarn
+
+      - name: Check Typescript and Eslint
+        run: yarn lint
+
+      # - name: Check Jest Unit Tests
+      #   run: yarn test --coverage
+
+      # - name: Send Jest unit tests coverage to Codecov
+      #   uses: codecov/codecov-action@v3.1.0
+      #   with:
+      #     token: 3efb4429-6bfe-4ebc-9eda-1a458d722beb
+
+  # cypress-run:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+
+  #     - name: Check Cypress e2e tests
+  #       uses: cypress-io/github-action@v4
+  #       with:
+  #         build: yarn build
+  #         start: yarn start
+  #         record: true
+  #         config-file: cypress.config.ts
+  #       env:
+  #         CYPRESS_RECORD_KEY: 1c84deff-9861-4ddc-9193-08dbabff4d2e
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

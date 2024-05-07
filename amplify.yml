@@ -1,0 +1,22 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn
+
+    build:
+      commands:
+        # This env command will create a .env file with the environment variables
+        - echo "NEXT_PUBLIC_ENVIRONMENT=$NEXT_PUBLIC_ENVIRONMENT" >> .env
+
+        - yarn run build
+
+  artifacts:
+    baseDirectory: .next
+
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

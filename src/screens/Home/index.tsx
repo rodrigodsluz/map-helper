@@ -1,13 +1,5 @@
-import { Container } from './styles';
+import * as S from './styles';
 
-function HomeScreen() {
-  return (
-    <Container>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam
-      esse laboriosam maiores. Minus molestias modi voluptates, perferendis
-      repellat, non esse iure expedita officiis, mollitia quas ad reiciendis
-    </Container>
-  );
+export function HomeScreen() {
+  return <S.Container>Hello human!</S.Container>;
 }
-
-export default HomeScreen;
