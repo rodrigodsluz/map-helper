@@ -15,14 +15,14 @@ const ToastContainer = dynamic(
 export const ToastAlertContainer = styled(ToastContainer)`
   ${({
     theme: {
-      colors: { light, error, secondary, darkGrey },
+      colors: { error, secondary, primary },
       fonts: { textSubtitleCard },
     },
   }) => css`
     margin-bottom: 3rem;
 
     .Toastify__toast--error {
-      background-color: ${light};
+      background-color: ${primary};
       border-left: 0.5rem solid ${error};
       border-right: 0.5rem solid ${error};
       border-top: 0.5rem solid ${error};
@@ -39,7 +39,7 @@ export const ToastAlertContainer = styled(ToastContainer)`
     }
 
     .Toastify__toast--success {
-      background-color: ${light};
+      background-color: ${primary};
       border-left: 0.5rem solid ${secondary};
       border-right: 0.5rem solid ${secondary};
       border-top: 0.5rem solid ${secondary};
@@ -64,7 +64,7 @@ export const ToastAlertContainer = styled(ToastContainer)`
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
-      color: ${darkGrey};
+      color: ${secondary};
 
       b {
         margin-right: 0.5rem;

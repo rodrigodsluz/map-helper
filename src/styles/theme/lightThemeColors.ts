@@ -5,6 +5,7 @@ const lightThemeColors = {
   tertiary: '#FFD700',
   scrollBar: '#FFF',
   nProgressLoadingBar: '#28a745',
+  error: '#f44336',
 };
 
 export default lightThemeColors;

@@ -5,4 +5,5 @@ export default {
   tertiary: '#FFF',
   scrollBar: '#000',
   nProgressLoadingBar: '#28a745',
+  error: '#f44336',
 };
