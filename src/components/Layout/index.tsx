@@ -4,16 +4,18 @@ import NavBar from '@components/NavBar';
 import { ILayout } from './interface';
 import { Container, Wrapper, ChildrenContainer } from './styles';
 
-const Layout = ({ children }: ILayout): JSX.Element => (
-  <Container>
-    <Wrapper>
-      <NavBar />
+function Layout({ children }: ILayout): JSX.Element {
+  return (
+    <Container>
+      <Wrapper>
+        <NavBar />
 
-      <ChildrenContainer>{children}</ChildrenContainer>
+        <ChildrenContainer>{children}</ChildrenContainer>
 
-      <Footer />
-    </Wrapper>
-  </Container>
-);
+        <Footer />
+      </Wrapper>
+    </Container>
+  );
+}
 
 export default Layout;

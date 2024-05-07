@@ -1,13 +1,7 @@
 import HomeScreen from '@screens/Home';
 
-/**
- * @export
- * @component
- * @name HomePage
- *
- * @description
- * Home page
- */
-const HomePage = (): JSX.Element => <HomeScreen />;
+function HomePage() {
+  return <HomeScreen />;
+}
 
 export default HomePage;

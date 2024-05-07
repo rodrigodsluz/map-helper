@@ -14,16 +14,6 @@ type Props = {
   styleTags: string;
 };
 
-/**
- * @export
- * @component
- * @name ApplicationDocument
- *
- * @description
- * Responsible for all settings of project.
- * Allows us to override the default page layout and inject our own styles and markup.
- * Only rendered on the server side.
- */
 export default class ApplicationDocument extends Document<Props> {
   static async getInitialProps(
     ctx: DocumentContext,
