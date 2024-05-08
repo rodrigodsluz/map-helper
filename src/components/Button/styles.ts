@@ -1,17 +1,22 @@
 import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
-  ${() => css`
+  ${({
+    theme: {
+      colors: { primary, secondary },
+    },
+  }) => css`
+    background-color: ${primary};
+    color: ${secondary};
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f00;
 
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     border: none;
-    color: #fff;
     font-size: 2rem;
     cursor: pointer;
 
