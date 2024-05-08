@@ -6,7 +6,5 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
-
-    //background-color: #f0f0f0;
   `}
 `;
