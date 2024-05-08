@@ -6,6 +6,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
+          <title>Map Helper</title>
+
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
           <link rel="apple-touch-icon" href="/icons/cd-icon.png" />
