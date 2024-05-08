@@ -1,7 +1,8 @@
+import { FaCheckCircle } from 'react-icons/fa';
+import { FaTriangleExclamation } from 'react-icons/fa6';
+
 import dynamic from 'next/dynamic';
 import styled, { css } from 'styled-components';
-
-import { ExclamationTriangle, CheckCircleFill } from '@styled-icons/bootstrap';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -76,7 +77,7 @@ export const ToastAlertContainer = styled(ToastContainer)`
   `}
 `;
 
-export const IconError = styled(ExclamationTriangle)`
+export const IconError = styled(FaTriangleExclamation)`
   ${({
     theme: {
       colors: { error },
@@ -90,7 +91,7 @@ export const IconError = styled(ExclamationTriangle)`
   `}
 `;
 
-export const IconSuccess = styled(CheckCircleFill)`
+export const IconSuccess = styled(FaCheckCircle)`
   ${({
     theme: {
       colors: { secondary },
