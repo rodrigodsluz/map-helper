@@ -21,13 +21,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier",
-    "import",
-    "eslint-plugin-import-helpers"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier", "import", "eslint-plugin-import-helpers"],
   "globals": {
     "JSX": true,
     "React": true
@@ -103,6 +97,7 @@
     "jsx-a11y/label-has-associated-control": "off",
     "no-confusing-arrow": "off",
     "indent": "off",
-    "react/no-unused-prop-types": "off"
+    "react/no-unused-prop-types": "off",
+    "no-alert": "off"
   }
 }
