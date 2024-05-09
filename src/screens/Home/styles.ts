@@ -8,3 +8,12 @@ export const Container = styled.div`
     flex: 1;
   `}
 `;
+
+export const PlacesList = styled.ul`
+  ${() => css`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+  `}
+`;

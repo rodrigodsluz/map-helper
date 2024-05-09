@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Modal from '@components/Modal';
 
-import { api } from '@services/api';
+import { createPlaces } from '@services/places';
 
 import * as S from './styles';
 
@@ -17,18 +17,13 @@ export function ModalHome({ openModal, toggleModal }: ModalHomeProps) {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    try {
-      const response = await api.post('/places', { name, address });
-      if (response.status === 201) {
-        alert('Place added successfully');
-        setName('');
-        setAddress('');
-        toggleModal();
-      } else {
-        throw new Error(response.data.error || 'Something went wrong');
-      }
-    } catch (error) {
-      alert(`Failed to add place: ${error.message}`);
+
+    const response = await createPlaces({ name, address });
+
+    if (response) {
+      setName('');
+      setAddress('');
+      toggleModal();
     }
   };
 

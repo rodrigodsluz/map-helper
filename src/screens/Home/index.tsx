@@ -22,10 +22,17 @@ export function HomeScreen() {
     return <div>Loading...</div>;
   }
 
-  console.log('places', places);
-
   return (
     <S.Container>
+      <S.PlacesList>
+        {places?.map(place => (
+          <li key={place.id}>
+            <strong>{place.name}</strong>
+            <p>{place.address}</p>
+          </li>
+        ))}
+      </S.PlacesList>
+
       <Map />
 
       <Button onClick={handleOpenModal} />
