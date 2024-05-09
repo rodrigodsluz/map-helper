@@ -1,7 +1,6 @@
-// models/User.ts
 import mongoose from 'mongoose';
 
-const UserSchema = new mongoose.Schema({
+const PlaceSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Please provide a name.'],
@@ -12,4 +11,4 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.models.User || mongoose.model('User', UserSchema);
+export default mongoose.models.Place || mongoose.model('Place', PlaceSchema);
